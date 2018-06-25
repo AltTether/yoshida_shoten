@@ -1,6 +1,7 @@
 module.exports = {
   mongo: {
     username: "",
-    password: ""
+    password: "",
+		url: ""
   }
 };
