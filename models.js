@@ -27,8 +27,9 @@ const Logs = new Schema({
 const config = require('./mongo.config.js').mongo;
 const dbuser = config.username;
 const dbpassword = config.password;
+const dburl = config.url;
 
-mongoose.connect("mongodb://"+dbuser+":"+dbpassword+"@ds259620.mlab.com:59620/heroku_mj76fhzf");
+mongoose.connect("mongodb://"+dbuser+":"+dbpassword+dburl);
 module.exports.Users = mongoose.model('Users', Users);
 module.exports.Items = mongoose.model('Items', Items);
 module.exports.Logs = mongoose.model('Logs', Logs);
